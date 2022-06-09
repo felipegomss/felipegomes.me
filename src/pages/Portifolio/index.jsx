@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import "./portifolio.scss";
 
 function Portifolio() {
+  const GIT_API_TOKEN = process.env;
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -17,7 +19,7 @@ function Portifolio() {
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
-            Authorization: "bearer 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",
+            Authorization: `bearer ${GIT_API_TOKEN}`,
           },
         }
       );
