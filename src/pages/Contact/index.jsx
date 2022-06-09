@@ -19,11 +19,11 @@ function Contact() {
           <h3>Salvador - Bahia, Brazil</h3>
           <h3>
             <a
-              href="https://api.whatsapp.com/send?phone=5574991304253"
+              href="https://api.whatsapp.com/send?phone=5571994178164"
               rel="noreferrer"
               target="_blank"
             >
-              +55 74 9 9130-4253
+              +55 71 9 9417-8164
             </a>
           </h3>
           <div className="social">
