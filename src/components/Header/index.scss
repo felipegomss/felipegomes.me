@@ -1,0 +1,21 @@
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  padding: 2rem;
+
+  .back {
+    text-align: center;
+    width: 100%;
+  }
+  span {
+    a {
+      margin: 0 1rem;
+      color: rgb(129, 127, 127);
+
+      &:hover {
+        color: #ebebeb;
+      }
+    }
+  }
+}
