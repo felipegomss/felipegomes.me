@@ -75,7 +75,7 @@ function Home() {
           <div>
             <span>
               <h1 className="title">
-                FELIPE<span>GOMES!</span>
+                FELIPE<span>GOMES</span>
               </h1>
               <p className="slogan">
                 Turn ideas into reality <FaRegLightbulb className="ligh" />

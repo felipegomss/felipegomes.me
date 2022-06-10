@@ -6,10 +6,10 @@ import "./styles/global.scss";
 
 function App() {
   return (
-    <>
+    <div className="main--wapper">
       <AppRoutes />
       <ScrollButton />
-    </>
+    </div>
   );
 }
 
