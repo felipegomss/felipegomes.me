@@ -1,26 +1,108 @@
-.portifolio {
-  padding: 3rem 2rem 0 2rem;
-  .pin {
-    margin: 3rem 0 0 0;
+ul {
+  list-style: none;
+}
 
-    ul {
-      list-style: none;
+.portifolio {
+  padding: 1rem 2rem 0 2rem;
+  .pin,
+  .companies {
+    margin: 0 0 3rem 0;
+  }
+  .companies--box {
+    height: 35vw;
+    max-height: 250px;
+    h2 {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .companies {
+      position: absolute;
+      width: 100vw;
+      left: 0;
+
+      background-image: linear-gradient(
+        to right,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #ffffff,
+        #fbfcff,
+        #fbfcff,
+        #f3f9ff,
+        #ebf8fe,
+        #e3f6fc,
+        #dbf5f7
+      );
+
+      .companies--list {
+        width: 100%;
+        display: grid;
+        place-items: center;
+        padding: 1rem 0;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1rem;
+        overflow-x: scroll;
+        a {
+          width: 17vw;
+          height: min-content;
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
   }
+  // .companies {
+  //   .companies--list {
+  // width: 100%;
+  // display: grid;
+  // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  // place-items: center;
+  // padding: 1rem 0;
+  // grid-gap: 1rem;
+
+  //     a {
+  //       width: 100%;
+  //       height: 20vh;
+  //       background-color: #fff;
+  //       display: grid;
+  //       place-items: center;
+  //       padding: 1rem;
+  //       img {
+  //         width: 50%;
+  //       }
+  //     }
+  //   }
+  // }
   .board {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem 1rem;
-    justify-content: center;
+    display: grid;
+    // flex-wrap: wrap;
+    // margin: 1rem 1rem;
+    // justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
     .card {
-      width: 275px;
-      height: 155px;
+      width: 100%;
+      height: 20vh;
       background-image: url(../../assets/cardbg.png);
       // background-size: 20%;
       // background-repeat: no-repeat;
       background-position: center;
       // background-position-x: 1.5rem;
+
+      border: 4px solid #ff6825;
+
+      position: relative;
+      display: flex;
+      align-items: center;
       .img {
         position: absolute;
         height: 100%;
@@ -32,13 +114,6 @@
         }
       }
 
-      border: 4px solid #ff6825;
-      margin: 0 1rem;
-
-      position: relative;
-      display: flex;
-      padding: 1.5rem;
-      align-items: center;
       h1 {
         font-family: "Staatliches", monospace;
         font-size: 1.5rem;
@@ -59,17 +134,20 @@
 
       .lang {
         position: absolute;
-        display: flex;
-        bottom: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0.3rem;
+        padding: 0;
         width: 100%;
+        bottom: 0;
         right: 0;
-        justify-content: space-around;
         font-family: "Ubuntu Mono", monospace;
         h3 {
           padding: 0.3rem;
-          background-color: #fff;
-          color: #000;
-          width: 60px;
+          background-color: #141414;
+          color: #ebebeb;
+          width: 100%;
           div {
             width: 10px;
             height: 10px;
@@ -83,9 +161,17 @@
       }
     }
     .description {
-      margin: 0.32rem 1rem 1rem 1rem;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 0.3rem;
+
+      li {
+        text-align: right;
+      }
+      p li {
+        text-align: left;
+        color: #fff;
+      }
 
       .just--repo {
         cursor: help;
@@ -94,12 +180,34 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1080px) {
   .portifolio {
+    .companies--box {
+      h2 {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+      .companies {
+        .companies--list {
+          padding: 1rem 20rem;
+          a {
+            width: 5vw;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
     .board {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 1rem;
       .card {
-        width: 384px;
-        height: 216px;
+        width: 100%;
+        height: 10vw;
 
         h1 {
           text-align: end;
@@ -122,6 +230,11 @@
             #ff6825,
             #ff6825
           );
+        }
+
+        .lang {
+          padding: 0 0.3rem;
+          bottom: 0.3rem;
         }
       }
     }

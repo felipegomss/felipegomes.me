@@ -28,7 +28,7 @@ function Home() {
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
-            Authorization: "bearer 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",
+            Authorization: `bearer ${process.env.REACT_APP_GIT_API_TOKEN}`,
           },
         }
       );
@@ -75,7 +75,7 @@ function Home() {
           <div>
             <span>
               <h1 className="title">
-                FELIPE<span>GOMES!</span>
+                FELIPE<span>GOMES</span>
               </h1>
               <p className="slogan">
                 Turn ideas into reality <FaRegLightbulb className="ligh" />
