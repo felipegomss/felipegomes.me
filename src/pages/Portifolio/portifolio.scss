@@ -9,9 +9,10 @@ ul {
     margin: 0 0 3rem 0;
   }
   .companies--box {
-    height: 15rem;
+    height: 35vw;
+    max-height: 250px;
     h2 {
-      font-size: 0.8rem;
+      font-size: 1rem;
       text-align: center;
     }
     .companies {
@@ -46,7 +47,7 @@ ul {
         padding: 1rem;
         overflow-x: scroll;
         a {
-          width: 23vw;
+          width: 17vw;
           height: min-content;
           padding: 0;
           margin: 0;
@@ -179,11 +180,11 @@ ul {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1080px) {
   .portifolio {
     .companies--box {
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: left;
       }
       .companies {
