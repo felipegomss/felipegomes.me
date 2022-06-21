@@ -68,7 +68,7 @@ function Home() {
               </button>
               <button onClick={contactScroll}>
                 {" "}
-                <p>Get in touch</p>{" "}
+                <p>Get in touch</p>
               </button>
             </nav>
           </div>

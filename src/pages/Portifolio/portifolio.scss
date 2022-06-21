@@ -4,83 +4,30 @@ ul {
 
 .portifolio {
   padding: 1rem 2rem 0 2rem;
-  .pin,
-  .companies {
-    margin: 0 0 3rem 0;
-  }
-  .companies--box {
-    height: 35vw;
-    max-height: 250px;
-    h2 {
-      font-size: 1rem;
-      text-align: center;
-    }
-    .companies {
-      position: absolute;
-      width: 100vw;
-      left: 0;
 
-      background-image: linear-gradient(
-        to right,
-        #ffffff,
-        #ffffff,
-        #ffffff,
-        #ffffff,
-        #ffffff,
-        #ffffff,
-        #fbfcff,
-        #fbfcff,
-        #f3f9ff,
-        #ebf8fe,
-        #e3f6fc,
-        #dbf5f7
-      );
+  .companies--box{
+    width: 100%;
+    margin-bottom: 2rem;
+    .companies--list{
+      padding: 2rem;
+      display: grid;
+      place-items: center;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      background: #fff;
+      // grid-gap: 2rem;
 
-      .companies--list {
-        width: 100%;
-        display: grid;
-        place-items: center;
-        padding: 1rem 0;
-        grid-gap: 1rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        padding: 1rem;
-        overflow-x: scroll;
-        a {
-          width: 17vw;
-          height: min-content;
-          padding: 0;
-          margin: 0;
-          background-color: transparent;
-          img {
-            width: 100%;
-          }
+      .company--link{
+        width: 100px;
+        img{
+          width: 100%;
         }
       }
     }
   }
-  // .companies {
-  //   .companies--list {
-  // width: 100%;
-  // display: grid;
-  // grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  // place-items: center;
-  // padding: 1rem 0;
-  // grid-gap: 1rem;
 
-  //     a {
-  //       width: 100%;
-  //       height: 20vh;
-  //       background-color: #fff;
-  //       display: grid;
-  //       place-items: center;
-  //       padding: 1rem;
-  //       img {
-  //         width: 50%;
-  //       }
-  //     }
-  //   }
-  // }
+
+
   .board {
     display: grid;
     // flex-wrap: wrap;
@@ -92,7 +39,8 @@ ul {
     .card {
       width: 100%;
       height: 20vh;
-      background-image: url(../../assets/cardbg.png);
+      background-color: #ebebeb;
+      // background-image: url(../../assets/cardbg.png);
       // background-size: 20%;
       // background-repeat: no-repeat;
       background-position: center;
@@ -182,21 +130,11 @@ ul {
 
 @media (min-width: 1080px) {
   .portifolio {
-    .companies--box {
-      h2 {
-        font-size: 1.5rem;
-        text-align: left;
-      }
-      .companies {
-        .companies--list {
-          padding: 1rem 20rem;
-          a {
-            width: 5vw;
-            img {
-              width: 100%;
-            }
-          }
-        }
+
+    .companies--box{
+      .companies--list{ 
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
       }
     }
 

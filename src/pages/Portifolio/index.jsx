@@ -2,8 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./portifolio.scss";
 
-const GIT_API_TOKEN = process.env;
-
 function Portifolio() {
   const [data, setData] = useState([]);
   const companies = [
@@ -16,6 +14,7 @@ function Portifolio() {
       name: "GlupDesign",
       imageUrl:
         "http://glupdesign.com.br/img/Glup-Azul-Azul-Verde-Sem%20Fundo.png",
+      pageUrl: "http://glupdesign.com.br/",
     },
     {
       name: "EISA - Ericsson Inovacao S.A",
@@ -69,7 +68,6 @@ function Portifolio() {
     <div className="portifolio" id="portifolio">
       <div className="companies--box">
         <h2>Some awsome companies I've collaborated</h2>
-        <div className="companies">
           <div className="companies--list">
             {companies.map((company, index) => {
               return (
@@ -78,12 +76,12 @@ function Portifolio() {
                   target="_blank"
                   rel="noreferrer"
                   key={index}
+                  className="company--link"
                 >
                   <img src={company.imageUrl} alt={company.name} />
                 </a>
               );
             })}
-          </div>
         </div>
       </div>
       <div className="pin">
